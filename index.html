@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="player">
+        <div class="wrapper">
+            <div class="details">
+                <div class="now-playing">Playing x of y</div>
+                <div class="track-art"></div>
+                <div class="track-name">Track Name</div>
+                <div class="track-artist"></div>
+            </div>
+
+            <div class="slider-container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek-slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+            </div>
+
+            <div class="slide-container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="80" class="volume-slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+            </div>
+
+            <div class="buttons">
+                <div class="random-track">
+                    <i class="fa fa-random" onclick="randomTrack()" title="random"></i>
+                </div>
+                <div class="prev-track">
+                    <i class="fa fa-step-backward" onclick="prevTrack()"></i>
+                </div>
+                <div class="playpause-track">
+                    <i class="fa fa-play fa-3x"></i>
+                </div>
+                <div class="next-track">
+                    <i class="fa fa-step-forward" onclick="nextTrack()"></i>
+                </div>
+                <div class="repeat-track">
+                    <i class="fa fa-repeat" onclick="repeatTrack()" title="repeat"></i>
+                </div>
+            </div>
+
+
+            <div id="wave">
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+            </div>
+        </div>
+    </div> 
+
+    <!-- <img src="" alt=""> -->
+    <script src="./mp.js"></script>
+</body>
+</html>
